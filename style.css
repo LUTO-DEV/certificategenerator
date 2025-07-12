@@ -59,7 +59,7 @@ button:hover {
 /* Business Name Overlay */
 .business-name {
   position: absolute;
-  top: 46%; /* Adjust to place above green line */
+  top: 42%; /* Adjust to place above green line */
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 28px;
