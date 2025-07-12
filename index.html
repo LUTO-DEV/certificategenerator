@@ -3,25 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Certificate Generator</title>
+  <title>Business Certificate Generator</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="container">
-    <h1>Business Certificate Generator</h1>
-    <form id="certificate-form">
-      <input type="text" id="business-name" placeholder="Enter your business name" required />
-      <button type="submit">Download Certificate PDF</button>
-    </form>
+  <h2>Business Certificate Generator</h2>
 
-    <div id="certificate-preview">
-      <img src="piaa-certificate.jpg" alt="Certificate Template" id="template-bg" />
-      <div id="business-text">Your Business Name</div>
-    </div>
+  <div class="input-section">
+    <label for="businessInput">Enter Business Name:</label>
+    <input type="text" id="businessInput" placeholder="Your Business Name" />
+    <button onclick="downloadPDF()">Download Certificate PDF</button>
   </div>
 
-  <!-- html2pdf.js -->
+  <div class="certificate-container" id="certificateContainer">
+    <img src="piaa-certificate.jpg" alt="Certificate Template" id="certificateTemplate">
+    <div class="business-name" id="businessName">Your Business Name</div>
+  </div>
+
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
