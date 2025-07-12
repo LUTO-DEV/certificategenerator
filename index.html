@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Certificate Generator</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/cc2?family=Montserrat&display=swap" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Business Certificate Generator</h1>
+            <input type="text" id="Business Name" placeholder="Enter Business Name" />
+            <button id="generateBtn">Download Certificate</button>
+        
+            <div>
+              <img src="piaa-certificate.jpg" alt="Certificate Template"/>
+              <div id="cert-name">Your Business Name</div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
