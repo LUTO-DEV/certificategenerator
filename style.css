@@ -92,9 +92,9 @@ h1 {
 /* ===== NAME POSITIONING ===== */
 #cert-name {
   position: absolute;
-  top: 52%; 
+  top: 340px; /* Fine-tune this value */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   font-weight: 600;
