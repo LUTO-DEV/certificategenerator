@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Certificate Generator</title>
-  
-  <!-- Professional Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-  
-  <!-- Favicon (optional) -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certificate Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <div class="container">
     <h1>Business Certificate Generator</h1>
+    <form id="certificate-form">
+      <input type="text" id="business-name" placeholder="Enter your business name" required />
+      <button type="submit">Download Certificate PDF</button>
+    </form>
 
-    <div class="input-group">
-      <input type="text" id="businessName" placeholder="Enter Business Name">
-      <button id="generateBtn">Download Certificate</button>
-    </div>
-
-    <div id="certificatePreview">
-      <img src="piaa-certificate.jpg" alt="Certificate Template">
-      <div id="cert-name">Your Business Name</div>
+    <div id="certificate-preview">
+      <img src="certificate-template.jpg" alt="Certificate Template" id="template-bg" />
+      <div id="business-text">Your Business Name</div>
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <!-- html2pdf.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
