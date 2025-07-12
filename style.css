@@ -1,68 +1,71 @@
+/* General Page Styling */
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f8f8f2;
   padding: 20px;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-h1 {
+h2 {
+  font-size: 28px;
   margin-bottom: 20px;
   color: #333;
 }
 
-form {
+.input-section {
   margin-bottom: 20px;
 }
 
 input[type="text"] {
   padding: 10px;
-  width: 60%;
   font-size: 16px;
+  width: 300px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 button {
   padding: 10px 20px;
   font-size: 16px;
   margin-left: 10px;
-  background-color: #28a745;
+  background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-#certificate-preview {
-  position: relative;
-  width: 1123px;
-  height: 794px;
-  margin: auto;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  overflow: hidden;
+button:hover {
+  background-color: #45a049;
 }
 
-#template-bg {
+/* Certificate Layout */
+.certificate-container {
+  position: relative;
+  width: 1123px; /* Make sure this matches your actual image size */
+  height: 794px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+#certificateTemplate {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-#business-text {
+/* Business Name Overlay */
+.business-name {
   position: absolute;
-  top: 55%; /* Adjust as needed */
+  top: 46%; /* Adjust to place above green line */
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 36px;
-  font-weight: 700;
-  color: #333;
-  white-space: nowrap;
-  pointer-events: none;
+  font-size: 28px;
+  font-family: 'Georgia', serif;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  width: 80%;
 }
