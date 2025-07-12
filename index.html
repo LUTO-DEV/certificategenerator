@@ -2,46 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Certificate Generator</title>
-  <style>
-    /* Temporary in-page CSS for debugging */
-    body { font-family: Arial, sans-serif; text-align: center; }
-    #certificatePreview { 
-      border: 2px dashed red; /* Visual debug */
-      margin: 20px auto;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Certificate Generator</title>
+  
+  <!-- Professional Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <h1>Business Certificate Generator</h1>
-  
-  <input type="text" id="businessName" placeholder="Enter Business Name">
-  <button id="generateBtn">Download Certificate</button>
+  <div class="container">
+    <h1>Business Certificate Generator</h1>
 
-  <!-- Certificate Container -->
-  <div id="certificatePreview">
-    <!-- Image wrapped in div for html2pdf -->
-    <div style="position: relative;">
-      <img src="piaa-certificate.jpg" alt="Certificate" style="width: 100%; max-width: 800px;">
-      <div id="cert-name" style="
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 24px;
-        font-weight: bold;
-      ">Your Business Name</div>
+    <div class="input-group">
+      <input type="text" id="businessName" placeholder="Enter Business Name">
+      <button id="generateBtn">Download Certificate</button>
+    </div>
+
+    <div id="certificatePreview">
+      <img src="piaa-certificate.jpg" alt="Certificate Template">
+      <div id="cert-name">Your Business Name</div>
     </div>
   </div>
 
-  <!-- Load scripts MANUALLY in order -->
-  <script>
-    console.log("Script started..."); // Debug point 1
-  </script>
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-  <script>
-    console.log("html2pdf loaded:", typeof html2pdf); // Debug point 2
-  </script>
   <script src="script.js"></script>
 </body>
 </html>
